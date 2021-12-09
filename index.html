@@ -2,16 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet">
     <title>Form</title>
 </head>
 <body>
 <!--Your Code Goes Below this line-->
+<div class="container">
 
+    <header class="header">
+        <h1 id="title">Credit Card Survey</h1>
+        <p id="description">Thank you for taking the time to take this survey</p>
+    </header>
+    <form action="Submit" id="survey-form">
+
+
+        <div class="form group">
+            <label for="name">Name</label>
+            <input class="form-control" id="name" name="name" placeholder="Enter your name" required type="text">
+        </div>
+
+        <div class="form group">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" name="email" placeholder="Enter your email" required type="text">
+        </div>
+
+        <div>
+            <label for="CVV">CVV</label>
+            <input class="form-control" id="CVV" name="CVV" placeholder="Enter your CVV" required type="number">
+        </div>
+        <div>
+            <label for="Credit Card Number">Credit Card Number</label>
+            <input class="form-control" id="Credit Card Number" name="Credit Card Number" placeholder="Enter your credit card number"
+                   required type="number" min="16"max="16">
+        </div>
+        <div>
+            <label>
+                <p>How much money do you make in a week</p>
+                <input checked="" class="input-radio" name="user-recommend" type="radio" value="$5000">
+                $3000
+            </label>
+
+            <label>
+                <input checked="" class="input-radio" name="user-recommend" type="radio" value="$2000">
+                $2000
+            </label>
+
+            <label>
+                <input checked="" class="input-radio" name="user-recommend" type="radio" value="$5000">
+                less than 2000
+            </label>
+        </div>
+        <div>
+            <p>What country do you live in</p>
+            <select class="form-control" id="most-like" name="mostLike" required="">
+                <option disabled="" selected="" value="">Select an option</option>
+                <option value="United States">United states</option>
+                <option value="Russia">Russia</option>
+                <option value="India">India</option>
+                <option value="New Mexico">New Mexico</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>
+                What would you normally use this card for
+                <span class="clue">(Check all that apply)</span>
+            </p>
+
+            <label><input class="input-checkbox" name="prefer" type="checkbox" value="Food">Food</label>
+            <label>
+                <input class="input-checkbox" name="prefer" type="checkbox" value="Gas">Gas</label>
+            <label><input class="input-checkbox" name="prefer" type="checkbox" value="Presents">Presents</label>
+            <label><input class="input-checkbox" name="prefer" type="checkbox" value="Online Shopping">Online
+                Shopping</label>
+            <label><input class="input-checkbox" name="prefer" type="checkbox" value="amazon">amazon</label>
+
+        </div>
+        <div class="form-group">
+            <p>Any more information that I would need to know?</p>
+            <textarea class="input-textarea" id="comments" name="comment"
+                      placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <button class="submit-button" id="submit" type="submit">
+            Submit
+        </button>
+    </form>
+</div>
 
 <!--Your Code Goes Above this line-->
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
